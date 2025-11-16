@@ -193,10 +193,6 @@ By the end of this project, you will:
 - ✅ Validate custom implementations against industry-standard libraries
 - ✅ Visualize and interpret compression artifacts and filtering effects
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit a pull request.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -204,15 +200,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Kousha Moeini**
+- Email: koushamoeini@gmail.com
 - GitHub: [@koushamoeini](https://github.com/koushamoeini)
-- Repository: [dip-compression-filtering](https://github.com/koushamoeini/dip-compression-filtering)
-
-## 🙏 Acknowledgments
-
-- **Course:** Digital Image Processing
-- **Department:** Mathematical Sciences
-- **Semester:** Spring 2025
 
 ---
-
-⭐ **If you find this project helpful, please consider giving it a star!** ⭐
