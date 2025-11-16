@@ -1,144 +1,135 @@
-# Digital Image Processing Toolkit
-
-A comprehensive Python implementation of fundamental digital image processing algorithms, focusing on JPEG compression and image filtering techniques. This project demonstrates practical applications of DCT-based compression, quantization, and various noise reduction filters.
+# Digital Image Processing: Compression & Filtering
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
-## 📋 Table of Contents
+A comprehensive educational project exploring fundamental digital image processing algorithms, including JPEG compression with DCT transformation and advanced image filtering techniques for noise reduction. This hands-on project demonstrates practical implementations of compression and filtering methods using Python.
 
+## 📚 Table of Contents
+
+- [Overview](#overview)
 - [Features](#features)
-- [Technologies](#technologies)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
+- [Topics Covered](#topics-covered)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Notebooks Overview](#notebooks-overview)
-- [Examples](#examples)
-- [Results](#results)
-- [Contributing](#contributing)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+- [Learning Objectives](#learning-objectives)
 - [License](#license)
-- [Contact](#contact)
+- [Author](#author)
+
+## 🎯 Overview
+
+This project provides a hands-on, interactive approach to understanding digital image processing through Jupyter notebooks. It combines theoretical implementations with practical exercises, allowing learners to implement JPEG compression algorithms and various image filtering techniques from scratch using Python.
+
+**Course:** Digital Image Processing  
+**Department:** Mathematical Sciences  
+**Semester:** Spring 2025
 
 ## ✨ Features
 
-### JPEG Compression Implementation
-- **DCT (Discrete Cosine Transform)**: Custom 1D and 2D DCT implementation from scratch
-- **Quantization**: Standard JPEG quantization matrix application
-- **Zigzag Scanning**: Efficient coefficient ordering for compression
-- **Image Reconstruction**: Inverse DCT for decompression
-- **Quality Metrics**: MSE, PSNR, SSIM, and compression ratio calculations
+- **Interactive Learning:** Jupyter notebook format with executable code cells and detailed explanations
+- **From-Scratch Implementation:** Build DCT, quantization, and filters using NumPy
+- **Real Image Processing:** Work with actual images (Lena, real-world photos)
+- **Visualization Focus:** Compare original vs. processed images side-by-side
+- **Quality Metrics:** MSE, PSNR, SSIM calculations for compression evaluation
+- **Filter Comparison:** Analyze different kernel sizes and filter types
 
-### Image Filtering
-- **Noise Generation**: Salt and pepper noise addition with configurable intensity
-- **Mean Filter**: Smoothing filter implementation (custom and OpenCV)
-- **Median Filter**: Non-linear filter for noise reduction (custom and OpenCV)
-- **Performance Comparison**: Side-by-side analysis of different filter sizes (3×3, 5×5, 7×7)
+## 📖 Topics Covered
 
-## 🛠 Technologies
+## 📖 Topics Covered
 
-- **Python 3.7+**
-- **NumPy** - Numerical computations and array operations
-- **Matplotlib** - Data visualization and image display
-- **OpenCV (cv2)** - Image processing and built-in filters
-- **scikit-image** - SSIM metric and image transformations
-- **imageio** - Image I/O operations
-- **Jupyter Notebook** - Interactive development environment
+### 1. JPEG Compression Implementation
+- **Discrete Cosine Transform (DCT):** Custom 1D and 2D DCT implementation from scratch
+- **Quantization:** JPEG standard quantization matrix application
+- **Zigzag Scanning:** Efficient coefficient ordering for compression
+- **Image Reconstruction:** Inverse DCT for decompression
+- **Quality Metrics:** MSE, PSNR, SSIM, and compression ratio calculations
 
-## 📁 Project Structure
-
-```
-dip-compression-filtering/
-├── notebooks/
-│   ├── jpeg_compression.ipynb       # JPEG compression implementation
-│   └── image_filtering.ipynb        # Image filtering techniques
-├── assets/
-│   └── images/
-│       ├── lena.png                 # Test image for filtering
-│       └── realImage.jpg            # Test image for compression
-├── src/                             # (Optional) Modular Python scripts
-├── docs/                            # Additional documentation
-├── .gitignore                       # Git ignore rules
-├── LICENSE                          # MIT License
-└── README.md                        # This file
-```
-
-## 📦 Prerequisites
-
-Before running the project, ensure you have:
-
-- Python 3.7 or higher
-- pip (Python package installer)
-- Jupyter Notebook or JupyterLab
+### 2. Image Filtering Techniques
+- **Noise Generation:** Salt and pepper noise addition with configurable intensity
+- **Mean Filter:** Smoothing filter implementation (both custom and OpenCV)
+- **Median Filter:** Non-linear filter for noise reduction (both custom and OpenCV)
+- **Performance Analysis:** Compare filter effectiveness across kernel sizes (3×3, 5×5, 7×7)
+- **Built-in vs Custom:** Validate implementations against OpenCV functions
 
 ## 🚀 Installation
 
-1. **Clone the repository**
+### Prerequisites
+
+- Python 3.7 or higher
+- Jupyter Notebook or JupyterLab
+
+### Setup Instructions
+
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/koushamoeini/dip-compression-filtering.git
    cd dip-compression-filtering
    ```
 
-2. **Create a virtual environment** (recommended)
+2. **Create a virtual environment (recommended):**
    ```bash
    python -m venv venv
-   
-   # On Windows
-   venv\Scripts\activate
-   
-   # On macOS/Linux
-   source venv/bin/activate
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Install required packages**
+3. **Install required packages:**
    ```bash
    pip install numpy matplotlib opencv-python scikit-image imageio jupyter
    ```
 
-   Or create a `requirements.txt`:
-   ```txt
-   numpy>=1.19.0
-   matplotlib>=3.3.0
-   opencv-python>=4.5.0
-   scikit-image>=0.18.0
-   imageio>=2.9.0
-   jupyter>=1.0.0
-   ```
-   
-   Then install:
+   Or install from requirements file:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Launch Jupyter Notebook**
+4. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook
    ```
 
+5. **Open a notebook:**
+   Navigate to `notebooks/jpeg_compression.ipynb` or `notebooks/image_filtering.ipynb` in your browser
+
 ## 💻 Usage
 
-### JPEG Compression
+### JPEG Compression Notebook
 
-Open `notebooks/jpeg_compression.ipynb` and run the cells sequentially:
+1. **Navigate to the notebook:** Open `notebooks/jpeg_compression.ipynb`
+2. **Follow the steps:**
+   - Load and preprocess images
+   - Apply DCT transformation to 8×8 blocks
+   - Quantize DCT coefficients
+   - Convert to compressed vector format
+   - Reconstruct image using inverse DCT
+   - Evaluate compression quality
 
+**Example:**
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Load and process image
-from jpeg_compression import run_jpeg_on_image
-
+# Run complete JPEG pipeline
 original, reconstructed, compressed_vector = run_jpeg_on_image('../assets/images/realImage.jpg')
 
-# Evaluate compression quality
+# Evaluate quality
 mse, psnr, ssim, ratio = evaluate(original, reconstructed, compressed_vector)
 print(f"PSNR: {psnr:.2f} dB, SSIM: {ssim:.4f}, Compression Ratio: {ratio:.2f}")
 ```
 
-### Image Filtering
+### Image Filtering Notebook
 
-Open `notebooks/image_filtering.ipynb`:
+1. **Navigate to the notebook:** Open `notebooks/image_filtering.ipynb`
+2. **Follow the steps:**
+   - Load test image (Lena)
+   - Generate salt & pepper noise at different rates
+   - Apply mean and median filters
+   - Compare custom vs. OpenCV implementations
+   - Analyze filter performance
 
+**Example:**
 ```python
 import cv2
 import numpy as np
@@ -146,116 +137,82 @@ import numpy as np
 # Load image
 gray = cv2.imread("../assets/images/lena.png", 0)
 
-# Add salt and pepper noise
-noisy_image = sp(gray, 0.1)  # 10% noise
+# Add noise
+noisy_image = sp(gray, 0.1)  # 10% salt & pepper noise
 
-# Apply mean filter
-filtered = apply_mean_filter(noisy_image, kernel_size=5)
-
-# Apply median filter
+# Apply filters
+mean_filtered = apply_mean_filter(noisy_image, kernel_size=5)
 median_filtered = apply_median_filter(noisy_image, kernel_size=5)
+
+# Compare results
+display_results(noisy_image, apply_mean_filter, filter_name="mean")
 ```
 
-## 📓 Notebooks Overview
+## 📁 Project Structure
 
-### 1. JPEG Compression (`jpeg_compression.ipynb`)
+```
+dip-compression-filtering/
+│
+├── notebooks/
+│   ├── jpeg_compression.ipynb       # JPEG compression implementation
+│   └── image_filtering.ipynb        # Image filtering techniques
+│
+├── assets/
+│   └── images/
+│       ├── lena.png                 # Test image for filtering
+│       └── realImage.jpg            # Test image for compression
+│
+├── src/                             # (Optional) Modular Python scripts
+├── docs/                            # Additional documentation
+├── .gitignore                       # Git ignore rules
+├── LICENSE                          # MIT License
+├── requirements.txt                 # Python dependencies
+└── README.md                        # This file
+```
 
-**Key Steps:**
-- Divide image into 8×8 blocks
-- Apply 2D DCT to each block
-- Quantize coefficients using JPEG standard matrix
-- Convert to 1D vector using zigzag scanning
-- Reconstruct image using inverse DCT
-- Calculate quality metrics (MSE, PSNR, SSIM)
+## 📦 Requirements
 
-**Functions:**
-- `apply_dct(image_array)` - Forward DCT transform
-- `quantize(dct_blocks)` - Quantization step
-- `mat_2_vec(jpeg_matrix)` - Zigzag scanning
-- `decompress_from_vector(jpeg_vector)` - Full decompression pipeline
-- `evaluate(original, reconstructed, jpeg_vector)` - Quality metrics
+- **numpy** - Numerical computing and array operations
+- **matplotlib** - Data visualization and image display
+- **opencv-python (cv2)** - Image processing and built-in filters
+- **scikit-image** - SSIM metric and image transformations
+- **imageio** - Image I/O operations
+- **jupyter** - Interactive notebook environment
 
-### 2. Image Filtering (`image_filtering.ipynb`)
+## 🎓 Learning Objectives
 
-**Key Steps:**
-- Generate salt & pepper noise at various intensities
-- Implement custom mean filter (NumPy only)
-- Implement custom median filter (NumPy only)
-- Compare with OpenCV built-in functions
-- Analyze filter performance across kernel sizes
+By the end of this project, you will:
 
-**Functions:**
-- `sp(pic, n)` - Salt and pepper noise generation
-- `apply_mean_filter(image, kernel_size)` - Custom mean filter
-- `apply_median_filter(image, kernel_size)` - Custom median filter
-- `builtin_mean_filter(image, kernel_size)` - OpenCV mean filter
-- `builtin_median_filter(image, kernel_size)` - OpenCV median filter
-
-## 📊 Examples
-
-### JPEG Compression Results
-
-| Metric | Value |
-|--------|-------|
-| MSE | ~50-100 |
-| PSNR | ~30-35 dB |
-| SSIM | ~0.85-0.95 |
-| Compression Ratio | ~8-15x |
-
-### Filter Comparison
-
-**Observation:** Larger kernel sizes provide stronger noise reduction but blur fine details more significantly.
-
-| Kernel Size | Noise Reduction | Detail Preservation |
-|-------------|-----------------|---------------------|
-| 3×3 | Moderate | High |
-| 5×5 | Good | Moderate |
-| 7×7 | Excellent | Low |
-
-## 🖼 Results
-
-<!-- Add screenshots here once available -->
-_Screenshots will be added showing:_
-- Original vs. compressed images
-- Noisy images with different noise levels
-- Filter comparison results
+- ✅ Understand JPEG compression pipeline from theory to implementation
+- ✅ Implement DCT transformation from scratch using NumPy
+- ✅ Apply quantization for lossy compression
+- ✅ Generate and analyze salt & pepper noise
+- ✅ Build custom mean and median filters without libraries
+- ✅ Compare filter performance across different kernel sizes
+- ✅ Calculate image quality metrics (MSE, PSNR, SSIM)
+- ✅ Validate custom implementations against industry-standard libraries
+- ✅ Visualize and interpret compression artifacts and filtering effects
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-**Commit Convention:**
-- `feat:` - New features
-- `fix:` - Bug fixes
-- `docs:` - Documentation changes
-- `style:` - Code formatting
-- `refactor:` - Code restructuring
-- `test:` - Test additions
-- `chore:` - Configuration/dependencies
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit a pull request.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Contact
+## 👤 Author
 
 **Kousha Moeini**
-- Student ID: 401100228
 - GitHub: [@koushamoeini](https://github.com/koushamoeini)
 - Repository: [dip-compression-filtering](https://github.com/koushamoeini/dip-compression-filtering)
 
 ## 🙏 Acknowledgments
 
-- Course: Digital Image Processing
-- Department: Mathematical Sciences
-- Semester: Spring 2025
+- **Course:** Digital Image Processing
+- **Department:** Mathematical Sciences
+- **Semester:** Spring 2025
 
 ---
 
-⭐ If you find this project helpful, please consider giving it a star!
+⭐ **If you find this project helpful, please consider giving it a star!** ⭐
