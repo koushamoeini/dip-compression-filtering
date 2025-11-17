@@ -202,5 +202,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Kousha Moeini**
 - Email: koushamoeini@gmail.com
 - GitHub: [@koushamoeini](https://github.com/koushamoeini)
-
----
